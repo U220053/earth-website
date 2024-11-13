@@ -13,6 +13,7 @@ import earth from "../public/assets/images/Group 38.svg";
 import xion from "../public/assets/images/Xion logo.png";
 import Link from "next/link";
 import { text } from "stream/consumers";
+import "../app/App.css";
 
 const Cards = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -22,6 +23,8 @@ const Cards = () => {
     {
       title: "Earth Protocol is Now Live on Bitfinity Testnet!",
       description: "We're excited to launch Earth Protocol's Incentivized ...",
+      descmob: "We're excited to launch Earth Protocol's Incentivized ...",
+
       img: img1,
       text: "Read More",
       link: "https://medium.com/earth-protocol/earth-protocol-is-now-live-on-bitfinity-testnet-c3e2032db9a7",
@@ -32,6 +35,7 @@ const Cards = () => {
       title: "Introducing EARTH — the endgame for Bitcoin LSTs",
       description:
         "In 2024, BitcoinFi emerged as a significant player in the...",
+      descmob: "In 2024, BitcoinFi emerged as a significant ...",
       img: img3,
       text: "Read More",
       link: "https://medium.com/earth-protocol/introducing-earth-the-endgame-for-bitcoin-liquid-re-staking-tokens-e2aa2e1748e0",
@@ -42,6 +46,7 @@ const Cards = () => {
       title: "Twitter",
 
       description: "Follow us on X (formerly Twitter) to stay updated!",
+      descmob: "Follow us on X (formerly Twitter) to stay updated!",
       img: img2,
       text: "Visit",
       link: "https://twitter.com/earthprotocol",
@@ -181,14 +186,14 @@ const Cards = () => {
               isMenuOpen ? "translate-x-0" : "translate-x-full"
             }`}
           >
-            <div className="flex flex-col items-start justify-start h-full pt-20 px-6">
+            <div className="flex flex-col items-start justify-start h-full pt-20 px-6 gap-y-5">
               <a
                 href="https://docs.earthfi.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                <span className="hover:text-green-400 cursor-pointer py-4 w-full border-b border-gray-800">
+                <span className="hover:text-green-400 cursor-pointer py-4 w-full  ">
                   DOCS
                 </span>
               </a>
@@ -198,7 +203,7 @@ const Cards = () => {
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                <span className="hover:text-green-400 cursor-pointer py-4 w-full border-b border-gray-800">
+                <span className="hover:text-green-400 cursor-pointer py-4 w-full  ">
                   MEDIUM
                 </span>
               </a>
@@ -208,7 +213,7 @@ const Cards = () => {
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                <span className="hover:text-green-400 cursor-pointer py-4 w-full border-b border-gray-800">
+                <span className="hover:text-green-400 cursor-pointer py-4 w-full  ">
                   TWITTER
                 </span>
               </a>
@@ -218,7 +223,7 @@ const Cards = () => {
                 rel="noopener noreferrer"
                 className="hover:underline"
               >
-                <span className="hover:text-green-400 cursor-pointer py-4 w-full border-b border-gray-800">
+                <span className="hover:text-green-400 cursor-pointer py-4 w-full ">
                   DISCORD
                 </span>
               </a>
@@ -228,14 +233,14 @@ const Cards = () => {
       </div>
       {/* BANNER */}
       <div className="absolute top-0  w-full h-3/5 md:h-3/5 flex flex-col justify-center items-center text-white px-4">
-        <div className="flex gap-x-4 flex-wrap items-center justify-center text-center mb-4 md:mb-0">
-          <h1 className="text-3xl md:text-6xl  font-bold mb-4 titleTextSub  ">
+        <div className="flex gap-x-4 flex-wrap items-center justify-center text-center mb-4 md:mb-0 xl:mb-4">
+          <h1 className="text-3xl md:text-6xl  font-bold mb-4 body-text bg-gradient-to-b from-white via-white to-gray-400 bg-clip-text text-transparent">
             Instant Liquidity on
           </h1>
           <Image
             src={xion}
             alt="corelogo"
-            className="md:-mt-6 w-[100px] md:w-[160px]"
+            className="md:-mt-8 w-[100px] md:w-[160px]"
           />
         </div>
         {/* <p className="text-md mb-6 text-center body-text">
@@ -247,7 +252,7 @@ const Cards = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="bg-gradient-to-r from-green-300 to-green-500 body-text text-black font-semibold py-3 px-6 text-md rounded-3xl shadow-md hover:from-green-500 hover:to-green-600 transition duration-300 flex items-center mt-4 md:mt-0">
+          <button className="bg-gradient-to-r from-[#88E272] via-[#C6FFB8] to-[#88E272] body-text text-black font-semibold py-3 px-6 text-md rounded-3xl shadow-md   flex items-center mt-4 md:mt-0">
             Mint $ORE
             {/* <FaArrowRightLong className="ml-[0.5rem]" size={20} /> */}
             <svg
@@ -269,7 +274,7 @@ const Cards = () => {
       <div className="bg-[#000000]/70 absolute bottom-0 left-0 w-full flex xs:h-1/4 xl:h-[30%] flex-row border-t-2 border-[#88e272] backdrop-blur-[50px] p-4 md:p-0 gap-4">
         {/* NEW UPDATE */}
         <div className="w-1/5 flex flex-col justify-center gap-4 items-center">
-          <div className="text-2xl font-medium bg-gradient-to-b from-white via-white to-gray-400 bg-clip-text text-transparent">
+          <div className="text-2xl font-medium bg-gradient-to-b from-white via-white to-gray-400 bg-clip-text text-transparent body-text">
             New Update
           </div>
           <div className="flex flex-row gap-x-1 md:gap-x-4">
@@ -287,10 +292,10 @@ const Cards = () => {
           {getVisibleCards().map((card, index) => (
             <div
               key={index}
-              className="w-1/3 h-44 flex flex-col items-start border border-white pl-4 pt-4"
+              className="w-1/3 2xl:w-auto h-44 flex flex-col items-start border  border-[#ffffff]/35 border-gradient-to-r from-[#ffffff]/35 to-[#676767]/35 pl-4 pt-4"
             >
               {/* Card Heading */}
-              <div className="h-1/3 text-md font-bold leading-5 text-white mb-4">
+              <div className="h-1/3  font-bold leading-5 text-white mb-4 2xl:mb-0 body-text">
                 {card.title}
               </div>
               {/* Card Body */}
@@ -324,15 +329,15 @@ const Cards = () => {
             .map((card, index) => (
               <div
                 key={index}
-                className="w-full sm:w-1/3 flex flex-col items-center border border-white pl-4 pt-4"
+                className="w-full h-44 sm:w-1/3 flex flex-col  border border-[#ffffff]/35 border-gradient-to-r from-[#ffffff]/35 to-[#676767]/35  pl-4 pt-4"
               >
-                <div className="h-1/3 text-md font-bold leading-5 text-white mb-4">
+                <div className="h-1/3 text-md font-bold leading-5 text-white mb-4 body-text">
                   {card.title}
                 </div>
                 <div className="h-2/3 flex justify-between gap-2">
                   <div className="w-2/3 flex flex-col justify-between">
                     <p className="font-normal text-sm text-white/55">
-                      {card.description}
+                      {card.descmob}
                     </p>
                     <Link
                       href={card.link}
@@ -344,7 +349,7 @@ const Cards = () => {
                       </button>
                     </Link>
                   </div>
-                  <Image src={img1} alt="" height={105} className="w-1/3" />
+                  <Image src={card.img} alt="" height={105} className="w-1/3" />
                 </div>
               </div>
             ))}

@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+@font-face {
+  font-family: "Subjectivity";
+  src: local("Subjectivity"),
+    url(./fonts/SubjectivityFont/Subjectivity-Medium.otf);
+}
+
+@font-face {
+  font-family: "SubjectivityBold";
+  src: local("SubjectivityBold"),
+    url(./fonts/SubjectivityFont/Subjectivity-Bold.otf);
+}
+
+.font-poppins {
+  font-family: "Poppins", "SubjectivityBold", "Subjectivity", Arial, Helvetica,
+    sans-serif;
+}
+.title-text {
+  font-family: "SubjectivityBold";
+}
+.body-text {
+  font-family: "Subjectivity";
+}
+.pop {
+  font-family: "Poppins";
+}
