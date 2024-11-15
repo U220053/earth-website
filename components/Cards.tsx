@@ -234,13 +234,13 @@ const Cards = () => {
       {/* BANNER */}
       <div className="absolute top-0  w-full h-3/5 md:h-3/5 flex flex-col justify-center items-center text-white px-4">
         <div className="flex gap-x-4 flex-wrap items-center justify-center text-center mb-4 md:mb-0 xl:mb-4">
-          <h1 className="text-3xl md:text-6xl  font-bold mb-4 body-text bg-gradient-to-b from-white via-white to-gray-400 bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-6xl  font-bold md:mb-4 body-text bg-gradient-to-b from-white via-white to-gray-400 bg-clip-text text-transparent">
             Instant Liquidity on
           </h1>
           <Image
             src={xion}
             alt="corelogo"
-            className="md:-mt-8 w-[100px] md:w-[160px]"
+            className="md:-mt-8 w-[80px] md:w-[160px]"
           />
         </div>
         {/* <p className="text-md mb-6 text-center body-text">
@@ -287,7 +287,7 @@ const Cards = () => {
           </div>
         </div>
 
-        {/* Display Current Set of 3 Cards in Circular Fashion */}
+        {/* Cards */}
         <div className="w-4/5 justify-around items-center gap-x-10 hidden md:flex">
           {getVisibleCards().map((card, index) => (
             <div
