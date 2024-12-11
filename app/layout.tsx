@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Earth Website",
-  description: "Earth Website",
+  title: "EarthFi | Unlocking Liquidity on XION",
+  description: "EarthFi | Unlocking Liquidity on XION",
 };
 
 export default function RootLayout({

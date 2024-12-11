@@ -23,13 +23,15 @@ const Cards = () => {
     {
       title: "Earth Protocol is Now Live on Bitfinity Testnet!",
       description: "We're excited to launch Earth Protocol's Incentivized ...",
-      descmob: "We're excited to launch Earth Protocol's Incentivized ...",
+      descmob: "We're excited to launch Earth Protocol's  ...",
 
       img: img1,
       text: "Read More",
       link: "https://medium.com/earth-protocol/earth-protocol-is-now-live-on-bitfinity-testnet-c3e2032db9a7",
-      height: 105,
-      width: 96.71,
+      height: 110,
+      width: 110,
+      htmob: 95,
+      wtmob: 95,
     },
     {
       title: "Introducing EARTH — the endgame for Bitcoin LSTs",
@@ -41,6 +43,8 @@ const Cards = () => {
       link: "https://medium.com/earth-protocol/introducing-earth-the-endgame-for-bitcoin-liquid-re-staking-tokens-e2aa2e1748e0",
       height: 122.96,
       width: 122.96,
+      htmob: 96,
+      wtmob: 96,
     },
     {
       title: "Twitter",
@@ -52,6 +56,8 @@ const Cards = () => {
       link: "https://twitter.com/earthprotocol",
       height: 118.78,
       width: 117,
+      htmob: 96,
+      wtmob: 96,
     },
   ];
 
@@ -274,10 +280,10 @@ const Cards = () => {
       <div className="bg-[#000000]/70 absolute bottom-0 left-0 w-full flex xs:h-1/4 xl:h-[30%] flex-row border-t-2 border-[#88e272] backdrop-blur-[50px] p-4 md:p-0 gap-4">
         {/* NEW UPDATE */}
         <div className="w-1/5 flex flex-col justify-center gap-4 items-center">
-          <div className="text-2xl font-medium bg-gradient-to-b from-white via-white to-gray-400 bg-clip-text text-transparent body-text">
+          <div className="text-2xl font-medium bg-gradient-to-b from-white via-white to-gray-400 bg-clip-text text-transparent body-text ">
             New Update
           </div>
-          <div className="flex flex-row gap-x-1 md:gap-x-4">
+          <div className="flex flex-row gap-x-1 md:gap-x-4 -ml-2 md:ml-0">
             <button onClick={handlePrevSlide}>
               <Image src={leftarrow} alt="" width={56} height={56} />
             </button>
@@ -349,7 +355,22 @@ const Cards = () => {
                       </button>
                     </Link>
                   </div>
-                  <Image src={card.img} alt="" height={105} className="w-1/3" />
+                  {/* <Image
+                    src={card.img}
+                    alt=""
+                    height={card.htmob}
+                    width={card.wtmob}
+                    // className="w-1/3"
+                  /> */}
+                  <div className="relative w-24 h-full flex-shrink-0">
+                    <Image
+                      src={card.img}
+                      alt={card.title}
+                      fill
+                      className="object-cover "
+                      sizes="(max-width: 768px) 96px, 128px"
+                    />
+                  </div>
                 </div>
               </div>
             ))}
